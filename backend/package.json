@@ -1,0 +1,31 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "npx nodemon | yarn pino-pretty",
+    "seeder:create-questions": "npx ts-node ./src/scripts/questionSeeder/createDemoQuestions.ts"
+  },
+  "build": "rimraf ./build && tsc",
+  "dependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.15.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "helmet": "^6.0.1",
+    "redis": "^4.6.5",
+    "redis-om": "^0.3.6",
+    "typescript": "^5.0.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "eslint": "^8.36.0",
+    "nodemon": "^2.0.22",
+    "pino-pretty": "^10.0.0",
+    "rimraf": "^4.4.1",
+    "ts-node": "^10.9.1"
+  }
+}
